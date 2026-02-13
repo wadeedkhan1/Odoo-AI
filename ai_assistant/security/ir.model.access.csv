@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_askodoo_prompt_template,askodoo.prompt.template,model_askodoo_prompt_template,base.group_system,1,1,1,1
+access_askodoo_chat_session,askodoo.chat.session,model_askodoo_chat_session,base.group_user,1,1,1,0
