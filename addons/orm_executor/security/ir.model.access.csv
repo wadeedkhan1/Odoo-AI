@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_orm_execution_log,orm.execution.log admin,model_orm_execution_log,base.group_system,1,1,1,1

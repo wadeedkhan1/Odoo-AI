@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_ai_assistant_session_tree" model="ir.ui.view">
+        <field name="name">ai.assistant.session.tree</field>
+        <field name="model">ai.assistant.session</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="query"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ai_assistant_session_form" model="ir.ui.view">
+        <field name="name">ai.assistant.session.form</field>
+        <field name="model">ai.assistant.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="user_id"/>
+                        <field name="query"/>
+                        <field name="response" widget="text"/>
+                        <field name="tool_payload" widget="text"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ai_assistant_session" model="ir.actions.act_window">
+        <field name="name">AskOdoo Sessions</field>
+        <field name="res_model">ai.assistant.session</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ai_assistant_session" name="Assistant Sessions" parent="llm_connector.menu_askodoo_root" action="action_ai_assistant_session"/>
+</odoo>

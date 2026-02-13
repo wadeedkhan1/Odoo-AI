@@ -1,0 +1,45 @@
+<odoo>
+    <record id="view_llm_backend_tree" model="ir.ui.view">
+        <field name="name">llm.backend.tree</field>
+        <field name="model">llm.backend</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="provider"/>
+                <field name="completion_model"/>
+                <field name="embedding_model"/>
+                <field name="is_default"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_llm_backend_form" model="ir.ui.view">
+        <field name="name">llm.backend.form</field>
+        <field name="model">llm.backend</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="provider"/>
+                        <field name="endpoint"/>
+                        <field name="api_key" password="True"/>
+                        <field name="completion_model"/>
+                        <field name="embedding_model"/>
+                        <field name="options_json" widget="text"/>
+                        <field name="is_default"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_llm_backend" model="ir.actions.act_window">
+        <field name="name">LLM Backends</field>
+        <field name="res_model">llm.backend</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_askodoo_root" name="AskOdoo" parent="base.menu_custom" sequence="99"/>
+    <menuitem id="menu_llm_backend" name="LLM Backends" parent="menu_askodoo_root" action="action_llm_backend"/>
+</odoo>

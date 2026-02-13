@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_llm_backend_user,llm.backend user,model_llm_backend,base.group_system,1,1,1,1

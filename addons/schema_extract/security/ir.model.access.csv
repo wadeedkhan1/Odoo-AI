@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_schema_model,schema.model admin,model_schema_model,base.group_system,1,1,1,1
+access_schema_field,schema.field admin,model_schema_field,base.group_system,1,1,1,1
+access_schema_method,schema.method admin,model_schema_method,base.group_system,1,1,1,1
