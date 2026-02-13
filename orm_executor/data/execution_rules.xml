@@ -1,0 +1,8 @@
+<odoo>
+    <record id="askodoo_rule_execution_log_owner" model="ir.rule">
+        <field name="name">AskOdoo Execution Log Own Records</field>
+        <field name="model_id" ref="model_askodoo_execution_log"/>
+        <field name="domain_force">['|', ('user_id', '=', user.id), ('user_id', '=', False)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>
